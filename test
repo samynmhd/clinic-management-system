@@ -1,0 +1,27 @@
+echo "<a>PID&nbsp</a>";
+                echo "<a>Name&nbsp</a>";
+                echo "<a>Naitonal ID&nbsp</a>";
+                echo "<a>Gender&nbsp</a>";
+                echo "<a>DOB&nbsp</a>";
+                echo "<a>Country&nbsp</a>";
+                echo "<a>City&nbsp</a>";
+                echo "<a>Address&nbsp</a>";
+                echo "<a>Phone_no&nbsp</a>";
+                while($row = mysqli_fetch_array($result)){
+                    echo "<p>";   
+                    echo "<a>".$row['patient_id']."&nbsp&nbsp&nbsp"."</a>";
+                    echo "<a>".$row['fname']." ".$row['lname']."&nbsp&nbsp&nbsp"."</a>";
+                    #echo "<a>".$row['lname']."</a>";
+                    echo "<a>".$row['id_no']."&nbsp&nbsp&nbsp"."</a>";
+                    echo "<a>".$row['gender']."&nbsp&nbsp&nbsp"."</a>";
+                    echo "<a>".$row['dob']."&nbsp&nbsp&nbsp"."</a>";
+                    echo "<a>".$row['country']."&nbsp&nbsp&nbsp"."</a>";
+                    echo "<a>".$row['city']."&nbsp&nbsp&nbsp"."</a>";
+                    echo "<a>".$row['address']."&nbsp&nbsp&nbsp"."</a>";
+                    echo "<a>".$row['phone_no']."&nbsp&nbsp&nbsp"."</a>";
+                    /*echo $row['patient_id']." ".$row['fname']." ".$row['lname']."".$row['id_no']."&nbsp&nbsp&nbsp&nbsp ".$row['gender']." ".$row['dob']." ".$row['country']." ".$row['city']." ".$row['address']." ".$row['phone_no']."<br>";*/
+                    echo "</p>";
+                }
+            }else{
+                echo "0 results";
+            }
